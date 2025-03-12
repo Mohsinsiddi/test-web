@@ -1,0 +1,110 @@
+ol.stepper {
+  --default-b: #00d07f;
+  --default-c: black;
+  --active-b: #00d07f;
+  --active-c: white;
+  --circle: 3.2rem;
+  --b: 5px;
+
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+ol.stepper li {
+  place-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+ol.stepper li::before {
+  content: '';
+  display: block;
+  width: var(--circle);
+  height: var(--circle);
+  background-image: url('../assets/tick.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+ol.stepper li:not(.active)::after {
+  content: '';
+  position: absolute;
+  height: var(--b);
+  right: 100%;
+  top: calc((var(--circle) - var(--b)) / 2);
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  ol.stepper {
+    display: grid;
+    gap: 20px;
+    background: linear-gradient(var(--default-b) 0 0) no-repeat
+      calc((var(--circle) - var(--b)) / 2) 50% / var(--b) 90%;
+  }
+  ol.stepper li {
+    display: flex;
+  }
+  ol.stepper li.active::after {
+    content: '';
+    position: absolute;
+    width: var(--b);
+    bottom: 100%;
+    left: calc((var(--circle) - var(--b)) / 2);
+    top: auto;
+    right: auto;
+    height: 100vw;
+    background: var(--active-b);
+  }
+}
+
+@media (max-width: 600px) {
+  ol.stepper {
+    display: grid;
+    gap: 20px;
+    background: linear-gradient(var(--default-b) 0 0) no-repeat
+      calc((var(--circle) - var(--b)) / 2) 50% / var(--b) 90%;
+  }
+  ol.stepper li {
+    display: flex;
+  }
+  ol.stepper li.active::after {
+    content: '';
+    position: absolute;
+    width: var(--b);
+    bottom: 100%;
+    left: calc((var(--circle) - var(--b)) / 2);
+    top: auto;
+    right: auto;
+    height: 100vw;
+    background: var(--active-b);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+  ol.stepper {
+    background: linear-gradient(var(--default-b) 0 0) no-repeat 30%
+      calc((var(--circle) - var(--b)) / 2) / 70% var(--b);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  ol.stepper {
+    background: linear-gradient(var(--default-b) 0 0) no-repeat 25%
+      calc((var(--circle) - var(--b)) / 2) / 80% var(--b);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  ol.stepper {
+    background: linear-gradient(var(--default-b) 0 0) no-repeat 30%
+      calc((var(--circle) - var(--b)) / 2) / 85% var(--b);
+  }
+}
