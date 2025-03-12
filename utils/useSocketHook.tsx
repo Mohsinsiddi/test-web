@@ -17,7 +17,7 @@ export const useSocketHook = () => {
    // Return a cleanup function to handle disconnection
    return () => {
      // If you have a disconnect function, call it here
-     // Example: if (socket) { disconnectSocket(); }
+     // Example: if (socket) { disconnectSocket(); 
    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket])
