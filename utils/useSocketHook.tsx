@@ -13,6 +13,12 @@ export const useSocketHook = () => {
          console.error('Failed to initialize socket:', error);
          // Consider adding proper error reporting or retry mechanism
        }
+    
+   // Return a cleanup function to handle disconnection
+   return () => {
+     // If you have a disconnect function, call it here
+     // Example: if (socket) { disconnectSocket(); }
+   };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket])
   return null
