@@ -2,8 +2,8 @@ import { gql } from '@apollo/client'
 
 
 export const CREATE_SEA_FREIGHT_SHIPMENT = gql`
-mutation CreateSeaFreightShipment($data: SeaFrieghtShipmentInput!) {
-  createSeaFrieghtShipment(data: $data) {
+mutation CreateSeaFreightShipment($data: SeaFreightShipmentInput!) {
+  createSeaFreightShipment(data: $data) {
     message
     success
   }
@@ -11,8 +11,8 @@ mutation CreateSeaFreightShipment($data: SeaFrieghtShipmentInput!) {
 `;
 
 export const CREATE_AIR_FREIGHT_SHIPMENT = gql`
- mutation CreateAirFrieghtShipment($data: AirFrieghtShipmentInput!) {
-  createAirFrieghtShipment(data: $data) {
+ mutation CreateAirFreightShipment($data: AirFreightShipmentInput!) {
+  createAirFreightShipment(data: $data) {
     success
     message
   }
@@ -20,16 +20,16 @@ export const CREATE_AIR_FREIGHT_SHIPMENT = gql`
 `;
 
 export const CREATE_RAIL_FREIGHT_SHIPMENT = gql`
-  mutation CreateRailFrieghtShipment($data: RailFrieghtShipmentInput!) {
-  createRailFrieghtShipment(data: $data) {
+  mutation CreateRailFreightShipment($data: RailFreightShipmentInput!) {
+  createRailFreightShipment(data: $data) {
     success
     message
   }
 }
 `;
 export const CREATE_TRUCK_FREIGHT_SHIPMENT = gql`
- mutation CreateTruckFrieghtShipment($data: TruckFrieghtShipmentInput!) {
-  createTruckFrieghtShipment(data: $data) {
+ mutation CreateTruckFreightShipment($data: TruckFreightShipmentInput!) {
+  createTruckFreightShipment(data: $data) {
     success
     message
   }

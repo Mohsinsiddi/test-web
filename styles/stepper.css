@@ -65,29 +65,6 @@ ol.stepper li:not(.active)::after {
   }
 }
 
-@media (max-width: 600px) {
-  ol.stepper {
-    display: grid;
-    gap: 20px;
-    background: linear-gradient(var(--default-b) 0 0) no-repeat
-      calc((var(--circle) - var(--b)) / 2) 50% / var(--b) 90%;
-  }
-  ol.stepper li {
-    display: flex;
-  }
-  ol.stepper li.active::after {
-    content: '';
-    position: absolute;
-    width: var(--b);
-    bottom: 100%;
-    left: calc((var(--circle) - var(--b)) / 2);
-    top: auto;
-    right: auto;
-    height: 100vw;
-    background: var(--active-b);
-  }
-}
-
 @media (min-width: 601px) and (max-width: 991px) {
   ol.stepper {
     background: linear-gradient(var(--default-b) 0 0) no-repeat 30%

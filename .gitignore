@@ -49,8 +49,7 @@ package-lock.json
 /libs
 /public
 /src/ui-components
-
-
+/src/aws-exports.tsx
 /validations
 /constants
 /assets
