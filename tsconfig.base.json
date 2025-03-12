@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "rootDir": ".",
+      "sourceMap": true,
+      "declaration": false,
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "noImplicitThis": false,
+      "importHelpers": true,
+      "target": "es2015",
+      "module": "esnext",
+      "lib": ["es2020", "dom"],
+      "skipLibCheck": true,
+      "skipDefaultLibCheck": true,
+      "baseUrl": ".",
+      "paths": {
+        "@wtx/admin-layout": ["libs/admin-layout/src/index.ts"],
+        "@wtx/admin-layout/server": ["libs/admin-layout/src/server.ts"],
+        "@wtx/helper": ["libs/helper/src/index.ts"],
+        "@wtx/shared/ui": ["libs/shared/ui/src/index.ts"]
+      }
+    },
+    "exclude": ["node_modules", "tmp"]
+  }
+  
